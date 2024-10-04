@@ -36,7 +36,7 @@ const Header = () => {
               <a className="nav-link" href="/accurate">Accurate AI</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#support">Support</a>
+              <a className="nav-link" href="/support">Support</a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#trial">Get Free Trial</a>

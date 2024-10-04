@@ -13,6 +13,10 @@ import Banner1 from './components/banner';
 import AccurAISection from './components/accurtext';
 import Banner2 from './components/accurbanner1';
 import Accurdiv from './components/accurdiv';
+import Supbanner from './components/supportbanner';
+import Supdiv from './components/supportdiv';
+import Suptext from './components/supporttext';
+import TestimonialsGrid from './components/testimonial';
 
 function App() {
   return (
@@ -48,6 +52,16 @@ function App() {
               <AccurAISection/>
               <Banner2 />
               <Accurdiv/>
+              <Footer />
+            </>
+          } />
+          <Route path="/support" element={
+            <>
+              <Header />
+              <Supbanner/>
+              <Suptext/>
+              <Supdiv/>
+              <TestimonialsGrid/>
               <Footer />
             </>
           } />

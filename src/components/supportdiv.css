@@ -1,0 +1,44 @@
+.accurAI-section5 {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 100px;
+  }
+  
+  .accurAI-row, .accurAI5-row {
+    width: 60%;
+    margin-left: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .accurAI5-image5 img {
+    width: 450px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .accurAI5-text {
+    max-width: 50%;
+    padding: 1rem;
+  }
+  
+  .accurAI-row {
+    flex-direction: row;
+  }
+  
+  .accurAI5-row {
+    flex-direction: row-reverse; /* This will place the image on the right and text on the left */
+  }
+  
+  @media (max-width: 768px) {
+    .accurAI-row, .accurAI5-row {
+      flex-direction: column; /* Stack image and text vertically on smaller screens */
+    }
+    
+    .accurAI5-text, .accurAI5-image5 {
+      max-width: 100%;
+    }
+  }

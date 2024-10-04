@@ -1,6 +1,5 @@
 import React from "react";
-import Slider from "react-slick";
-import { Link } from "react-router-dom";
+
 const testimonials = [
   {
     id: 1,
@@ -26,128 +25,83 @@ const testimonials = [
     feedback:
       "Accurate Commodity provides the best market tips I’ve ever used. Their accuracy and dedication to clients are unmatched. I’ve never felt more confident in my trading decisions.",
   },
-  {
-    id: 4,
-    name: "Priya S.",
-    image: "priya_image_url", // Replace with actual image URL
-    rating: 4,
-    feedback:
-      "The tips from Accurate Commodity helped me navigate a volatile market. Their expertise is evident, and their support is incredible.",
-  },
-  {
-    id: 5,
-    name: "Rahul V.",
-    image: "rahul_image_url", // Replace with actual image URL
-    rating: 5,
-    feedback:
-      "I've seen a consistent improvement in my trading performance thanks to their advice. Highly recommend for serious traders.",
-  },
-  {
-    id: 6,
-    name: "Suman T.",
-    image: "suman_image_url", // Replace with actual image URL
-    rating: 4,
-    feedback:
-      "Accurate Commodity has been a game-changer for my investments. Their accurate signals have led to steady profits.",
-  },
 ];
 
-const TestimonialsCarousel = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 1000,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,  // 3 seconds per slide
-    pauseOnHover: true,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
+const TestimonialsGrid = () => {
+  // Inline CSS Styles
+  const gridContainerStyle = {
+    display: "grid",
+    gridTemplateColumns: "repeat(3, 1fr)",
+    gap: "20px",
+    padding: "30px 20px",
+    backgroundColor: "#f8f9fa", 
+// Light background color for contrast
   };
 
-  // Inline CSS Styles
-  const carouselContainerStyle = {
-    padding: "50px 20px",
-    backgroundColor: "#f8f9fa", // Light background color for contrast
+  const gridTitleStyle = {
+    fontSize: "2rem",
+    padding : "90px",
+    marginBottom: "30px",
+    color: "#343a40", // Darker text color
     textAlign: "center",
   };
 
-  const carouselTitleStyle = {
-    fontSize: "2rem",
-    marginBottom: "30px",
-    color: "#343a40", // Darker text color
-  };
-
-  const carouselItemStyle = {
+  const gridItemStyle = {
     padding: "20px",
     background: "#fff", // White background for each testimonial
     borderRadius: "10px", // Rounded corners
     boxShadow: "0 2px 10px rgba(0, 0, 0, 0.1)", // Subtle shadow
+    textAlign: "center",
     transition: "transform 0.3s", // Animation on hover
   };
 
-  const carouselImageStyle = {
+  const gridImageStyle = {
     width: "80px", // Fixed width for images
     height: "80px", // Fixed height for images
     borderRadius: "50%", // Circle shape
     marginBottom: "15px", // Spacing below the image
   };
 
-  const carouselNameStyle = {
+  const gridNameStyle = {
     fontSize: "1.2rem",
     fontWeight: "bold",
     marginBottom: "5px",
   };
 
-  const carouselRatingStyle = {
+  const gridRatingStyle = {
     marginBottom: "10px", // Space between rating and feedback
     color: "#FFD700", // Gold color for stars
   };
 
-  const carouselFeedbackStyle = {
+  const gridFeedbackStyle = {
     fontSize: "0.9rem",
     color: "#6c757d", // Dark gray for feedback text
     lineHeight: "1.5", // Improve readability
   };
 
   return (
-    <div style={carouselContainerStyle}>
-      <h2 style={carouselTitleStyle}>What Our Customers Say</h2>
-      <Slider {...settings}>
+    <div>
+      <h2 style={gridTitleStyle}>What Our Customers Say</h2>
+      <div style={gridContainerStyle}>
         {testimonials.map((testimonial) => (
-          <div style={carouselItemStyle} key={testimonial.id}>
+          <div style={gridItemStyle} key={testimonial.id}>
             <img
               src={testimonial.image}
               alt={testimonial.name}
-              style={carouselImageStyle}
+              style={gridImageStyle}
             />
-            <h3 style={carouselNameStyle}>{testimonial.name}</h3>
-            <div style={carouselRatingStyle}>
+            <h3 style={gridNameStyle}>{testimonial.name}</h3>
+            <div style={gridRatingStyle}>
               {Array.from({ length: testimonial.rating }).map((_, index) => (
-                <span key={index}>&#9733;</span> 
+                <span key={index}>&#9733;</span>
               ))}
             </div>
-            <p style={carouselFeedbackStyle}>{testimonial.feedback}</p>
+            <p style={gridFeedbackStyle}>{testimonial.feedback}</p>
           </div>
         ))}
-      </Slider>
+      </div>
     </div>
   );
 };
 
-export default TestimonialsCarousel;
+export default TestimonialsGrid;

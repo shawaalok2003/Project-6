@@ -1,0 +1,56 @@
+/* Styling for the banner */
+.banner6-container {
+    background: linear-gradient(90deg, #2e0e48, #08132c);
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+  
+  .banner6-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    position: relative;
+  }
+  
+  .ai1-background {
+    font-size: 100px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+  
+  .banner6-text {
+    z-index: 2;
+    position: absolute;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .banner6-text h1 {
+    font-size: 48px;
+    margin: 0;
+    color: white;
+    right: 40%;
+  }
+  
+  .banner6-text p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffd700; /* Gold color */
+    margin: 0;
+  }
+  
