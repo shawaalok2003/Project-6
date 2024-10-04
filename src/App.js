@@ -8,6 +8,11 @@ import TestimonialsCarousel from './components/testimonial';
 import Footer from './components/footer';
 import LandingPage from './components/landing';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Import routing components
+import Banner from './components/accurbanner';
+import Banner1 from './components/banner';
+import AccurAISection from './components/accurtext';
+import Banner2 from './components/accurbanner1';
+import Accurdiv from './components/accurdiv';
 
 function App() {
   return (
@@ -18,6 +23,7 @@ function App() {
           <Route path="/" element={
             <>
               <Header />
+              <Banner1/>
               <Tips />
               <FinancialSuccess />
               <Service />
@@ -32,6 +38,16 @@ function App() {
             <>
               <Header />
               <LandingPage />
+              <Footer />
+            </>
+          } />
+<Route path="/accurate" element={
+            <>
+              <Header />
+              <Banner />
+              <AccurAISection/>
+              <Banner2 />
+              <Accurdiv/>
               <Footer />
             </>
           } />

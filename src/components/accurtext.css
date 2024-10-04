@@ -1,0 +1,46 @@
+/* Container for the entire section */
+.accur1-section-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 30px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Container for the image */
+  .image1-container img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 3px solid rgb(139, 147, 193);
+  }
+  
+  /* Container for the text */
+  .text1-container {
+    max-width: 600px;
+    text-align: left;
+  }
+  
+  .text1-container h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .text1-container h3 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 400;
+  }
+  
+  .text1-container p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+  }
+  
