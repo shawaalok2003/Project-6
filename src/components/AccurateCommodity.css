@@ -3,7 +3,11 @@ body {
     background-color: white;
     color: #333;
 }
-
+.sticky{
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Adjust as needed */
+}
 /* Top Bar */
 .top-bar {
     background-color: #1f1f1f;
@@ -27,7 +31,7 @@ body {
 }
 
 .nav-link {
-    color: #333 !important;
+    color: #fcf6f6 !important;
     font-weight: 500;
     text-transform: capitalize;
     padding: 10px 20px;
@@ -133,3 +137,49 @@ body {
     transition: all 0.3s ease;
     color: #fff;
 }
+
+.logooo{
+    display: block;
+}
+
+.navbar-brand{
+    position: relative;
+}
+.navbarNav1{
+    color: white;
+}
+
+.navbar-collapse{
+    position: absolute;
+    background-color: #003d80;
+    top: 50px;
+    padding: 10px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 10%;
+    height: 80px;
+    border-radius: 5px;
+    color: white;
+}
+
+.navbar-nav{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    color: white;
+}
+
+.nav-item1{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+.nav-item a{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+

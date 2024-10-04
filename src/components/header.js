@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'; // Import custom CSS
 
 const Header = () => {
   return (
-    <div>
+    <div className="sticky">
       {/* Top Bar */}
       <div className="top-bar d-flex justify-content-between align-items-center p-2">
         <p className="mb-0">India’s No.1 Commodity Signals Provider</p>
@@ -19,18 +19,18 @@ const Header = () => {
       {/* Logo and Navigation */}
       <nav className="navbar navbar-expand-lg navbar-light bg-white custom-nav">
         <a className="navbar-brand" href="/">
-          <img src="path-to-logo.png" alt="Accurate Commodity" className="logo" />
+          <img src="path-to-logo.png" alt="Accurate Commodity" className="logo logooo" />
         </a>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
+        <div className="collapse navbar-collapse" id="navbarNav1">
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
               <a className="nav-link" href="/">Home</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/about">About Us</a>A
+              <a className="nav-link" href="/about">About Us</a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="/accurate">Accurate AI</a>
@@ -46,8 +46,7 @@ const Header = () => {
             </li>
           </ul>
         </div>
-      </nav>
-    </div>
+      </nav></div>
   );
 };
 
