@@ -13,16 +13,29 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Header />
-        <Tips/>
-        <FinancialSuccess/>
-        <Service/>
-        <WhoWeAre/>
-        <TestimonialsCarousel/>
         <Routes>
-          <Route path="/about" element={<LandingPage />} /> 
+          {/* Home Page Route: Show everything except LandingPage */}
+          <Route path="/" element={
+            <>
+              <Header />
+              <Tips />
+              <FinancialSuccess />
+              <Service />
+              <WhoWeAre />
+              <TestimonialsCarousel />
+              <Footer />
+            </>
+          } />
+
+          {/* About Page Route: Show Header and LandingPage only */}
+          <Route path="/about" element={
+            <>
+              <Header />
+              <LandingPage />
+              <Footer />
+            </>
+          } />
         </Routes>
-        <Footer />
       </div>
     </Router>
   );
