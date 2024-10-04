@@ -1,0 +1,123 @@
+.footer {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    padding: 50px 0;
+    text-align: left;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .footer-left, .footer-right {
+    flex: 1;
+  }
+  
+  .footer-left {
+    max-width: 50%;
+  }
+  
+  .footer-right {
+    max-width: 45%;
+  }
+  
+  .footer h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-description {
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  
+  .footer-links {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-links a:hover {
+    color: #ffcc00; /* Highlight link on hover */
+  }
+  
+  /* Footer Form Styling */
+  .footer-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer-form input,
+  .footer-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+  }
+  
+  .footer-form input::placeholder,
+  .footer-form textarea::placeholder {
+    color: #999999;
+  }
+  
+  .footer-form button {
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    color: #2a2a2a;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .footer-form button:hover {
+    background-color: #ff9900; /* Darker yellow on hover */
+  }
+  
+  /* Footer bottom section */
+  .footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #444444;
+    margin-top: 30px;
+  }
+  
+  .footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+    color: #cccccc;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+    }
+  
+    .footer-left, .footer-right {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .footer-container {
+      padding: 0 10px;
+    }
+  }

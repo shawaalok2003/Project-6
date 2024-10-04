@@ -1,0 +1,32 @@
+container {
+    background-color: #1a1a1a; /* Dark background */
+    color: white; /* White text */
+    text-align: center; /* Center text */
+    padding: 50px 20px; /* Padding */
+    position: relative; /* For positioning the call to action */
+  }
+  
+  .title {
+    font-size: 36px; /* Title font size */
+    font-weight: bold; /* Bold title */
+    margin-bottom: 20px; /* Space below the title */
+  }
+  
+  .subtitle {
+    font-size: 18px; /* Subtitle font size */
+    margin-bottom: 30px; /* Space below the subtitle */
+  }
+  
+  .call-to-action {
+    background-color: #00b300; /* Buy button color */
+    color: white; /* Button text color */
+    padding: 15px 30px; /* Button padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 16px; /* Button font size */
+  }
+  
+  .call-to-action:hover {
+    background-color: #009900; /* Darker shade on hover */
+  }

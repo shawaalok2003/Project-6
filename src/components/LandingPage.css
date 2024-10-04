@@ -1,0 +1,104 @@
+/* General Page Layout */
+.landing-page {
+    width: 100%;
+  }
+  
+  /* Section 1: 50% Background Image and Text */
+  .half-background-section {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .text-side {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    background-color: #f4f4f4;
+  }
+  
+  .text-side h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .text-side p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+  }
+  
+  .background-side {
+    width: 50%;
+    /* background-image: url('./path-to-your-background-image.jpg'); */
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* Section 2: Image Left, Text Right */
+  .image-text-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    height: 100vh;
+  }
+  
+  .image-container {
+    width: 50%;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .text-container {
+    width: 50%;
+    padding-left: 30px;
+  }
+  
+  .text-container h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+  }
+  
+  .text-container p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333333;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    /* Stack the background image section vertically on smaller screens */
+    .half-background-section {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .text-side, .background-side {
+      width: 100%;
+      height: 50vh;
+    }
+  
+    /* Stack the image and text section vertically on smaller screens */
+    .image-text-section {
+      flex-direction: column;
+      padding: 20px;
+      height: auto;
+    }
+  
+    .image-container, .text-container {
+      width: 100%;
+    }
+  
+    .text-container {
+      padding-left: 0;
+      margin-top: 20px;
+    }
+  }
