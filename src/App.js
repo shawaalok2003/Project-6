@@ -2,11 +2,9 @@ import './App.css';
 import Header from './components/header';
 import Tips from './components/tips';
 import FinancialSuccess from './components/FinancialService';
-import Service from './components/service';
 import WhoWeAre from './components/vission';
 import TestimonialsCarousel from './components/testimonial';
 import Footer from './components/footer';
-import LandingPage from './components/landing';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Import routing components
 import Banner from './components/accurbanner';
 import Banner1 from './components/banner';
@@ -17,6 +15,11 @@ import Supbanner from './components/supportbanner';
 import Supdiv from './components/supportdiv';
 import Suptext from './components/supporttext';
 import TestimonialsGrid from './components/testimonial';
+import GetFreeCommodityTips from './components/getfreetrialbanner';
+import Service from './components/service';
+import Aboutdiv from './components/aboutdiv';
+import Aboutdiv1 from './components/aboutdiv';
+import Aboutbanner from './components/aboutdiv';
 
 function App() {
   return (
@@ -38,13 +41,6 @@ function App() {
           } />
 
           {/* About Page Route: Show Header and LandingPage only */}
-          <Route path="/about" element={
-            <>
-              <Header />
-              <LandingPage />
-              <Footer />
-            </>
-          } />
 <Route path="/accurate" element={
             <>
               <Header />
@@ -62,6 +58,24 @@ function App() {
               <Suptext/>
               <Supdiv/>
               <TestimonialsGrid/>
+              <Footer />
+            </>
+          } />
+          <Route path="/getfreetrial" element={
+            <>
+              <Header />
+              <GetFreeCommodityTips/>
+              <Service/>
+              <TestimonialsGrid/>
+              <Footer />
+            </>
+          } />
+          <Route path="/about" element={
+            <>
+              <Header />
+              <Aboutbanner/>
+              <WhoWeAre/>
+              <Service/>
               <Footer />
             </>
           } />
