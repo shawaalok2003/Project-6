@@ -7,7 +7,7 @@ const Tips = () => {
     <div className="container1">
       {/* Image Section */}
       <div className="image-section">
-        <img src="path-to-your-image.jpg" alt="Financial Expert" />
+        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGJ1c2luZXNzd29tYW58ZW58MHx8MHx8fDA%3D" alt="Financial Expert" />
       </div>
 
       {/* Text Section */}
