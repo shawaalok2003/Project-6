@@ -4,7 +4,7 @@ const testimonials = [
   {
     id: 1,
     name: "Rani Kumari",
-    image: "rani_image_url", // Replace with actual image URL
+    image: "https://plus.unsplash.com/premium_photo-1664203067979-47448934fd97?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZmFjZXxlbnwwfHwwfHx8MA%3D%3D", // Replace with actual image URL
     rating: 5,
     feedback:
       "Accurate Commodity’s tips have significantly boosted my trading success. Their timely and precise insights are invaluable. Highly recommend their services!",
@@ -12,7 +12,7 @@ const testimonials = [
   {
     id: 2,
     name: "Rakesh Singhal",
-    image: "rakesh_image_url", // Replace with actual image URL
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZmFjZXxlbnwwfHwwfHx8MA%3D%3D", // Replace with actual image URL
     rating: 5,
     feedback:
       "I’ve seen remarkable growth in my portfolio thanks to Accurate Commodity’s expert guidance. Their support team is also incredibly helpful. A trusted partner for any trader.",
@@ -20,7 +20,7 @@ const testimonials = [
   {
     id: 3,
     name: "Amit K",
-    image: "amit_image_url", // Replace with actual image URL
+    image: "https://images.unsplash.com/photo-1499996860823-5214fcc65f8f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZmFjZXxlbnwwfHwwfHx8MA%3D%3D", // Replace with actual image URL
     rating: 5,
     feedback:
       "Accurate Commodity provides the best market tips I’ve ever used. Their accuracy and dedication to clients are unmatched. I’ve never felt more confident in my trading decisions.",
@@ -34,13 +34,17 @@ const TestimonialsGrid = () => {
     gridTemplateColumns: "repeat(3, 1fr)",
     gap: "20px",
     padding: "30px 20px",
-    backgroundColor: "#f8f9fa", 
+    backgroundColor: "#f8f9fa",
+    boxShadow: "0 4px 8px rgba(0, 0, 0,0)", 
 // Light background color for contrast
   };
 
   const gridTitleStyle = {
     fontSize: "2rem",
+    fontWeight: "bold",
     padding : "90px",
+    paddingBottom:"0px",
+    paddingTop:"40px",
     marginBottom: "30px",
     color: "#343a40", // Darker text color
     textAlign: "center",
@@ -56,9 +60,9 @@ const TestimonialsGrid = () => {
   };
 
   const gridImageStyle = {
-    width: "80px", // Fixed width for images
-    height: "80px", // Fixed height for images
-    borderRadius: "50%", // Circle shape
+    width: "100px", // Fixed width for images
+    height: "120px", // Fixed height for images
+    //borderRadius: "50%", // Circle shape
     marginBottom: "15px", // Spacing below the image
   };
 

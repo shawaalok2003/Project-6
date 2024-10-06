@@ -2,12 +2,17 @@
     padding: 40px;
     background-color: #f5f6fa;
     font-family: Arial, sans-serif;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   
   /* Header Section */
   .header-section {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
   }
   
   .header-title {
@@ -26,17 +31,21 @@
   .content-section {
     display: flex;
     justify-content: space-between;
+    padding-left: 120px;
+    padding-right: 150px;
   }
   
   .left-content {
     flex: 1;
     padding-right: 40px;
+    text-align: left;
   }
   
   .highlight-title {
     font-size: 14px;
     color: #ff6600;
     margin-bottom: 10px;
+    font-weight: bolder;
   }
   
   .main-title {
@@ -52,6 +61,7 @@
   
   .mission-vision-container {
     margin-bottom: 40px;
+    text-align: left;
   }
   
   .section-title {
