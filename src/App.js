@@ -17,9 +17,9 @@ import Suptext from './components/supporttext';
 import TestimonialsGrid from './components/testimonial';
 import GetFreeCommodityTips from './components/getfreetrialbanner';
 import Service from './components/service';
-import Aboutdiv from './components/aboutdiv';
-import Aboutdiv1 from './components/aboutdiv';
 import Aboutbanner from './components/aboutdiv';
+import ContactForm from './components/contactform';
+import Contact from './components/contact';
 
 function App() {
   return (
@@ -76,6 +76,15 @@ function App() {
               <Aboutbanner/>
               <WhoWeAre/>
               <Service/>
+              <Footer />
+            </>
+          } />
+          <Route path="/contact" element={
+            <>
+              <Header />
+              <Aboutbanner/>
+              <Contact/>
+              <ContactForm/>
               <Footer />
             </>
           } />
