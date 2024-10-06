@@ -33,9 +33,10 @@ const TestimonialsGrid = () => {
     display: "grid",
     gridTemplateColumns: "repeat(3, 1fr)",
     gap: "20px",
-    padding: "30px 20px",
+    padding: "10px",
+    paddingLeft: "155px",
+    paddingRight: "155px",
     backgroundColor: "#f8f9fa",
-    boxShadow: "0 4px 8px rgba(0, 0, 0,0)", 
 // Light background color for contrast
   };
 
