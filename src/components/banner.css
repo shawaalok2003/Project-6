@@ -27,7 +27,7 @@
     max-width: 30%;
     padding-top: 0px;
     padding: 10px;
-    height: 305px;
+    height: 315px;
     margin-top: 30px;
     margin-right: 135px;
     margin-bottom: 150px;
@@ -79,8 +79,9 @@
     padding: 10px; /* Increased padding for better touch targets */
     font-size: 18px;
     cursor: pointer;
-    width: 100%;
+    width: 100px;
     margin-right: 50px; /* Adjusted to better align with the input */
+    margin-top: 10px;
 }
 
 .btn1-submit:hover {
