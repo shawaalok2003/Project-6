@@ -20,13 +20,13 @@ import Service from './components/service';
 import Aboutbanner from './components/aboutdiv';
 import ContactForm from './components/contactform';
 import Contact from './components/contact';
+import StickyButton from './components/sticky'; // Import the StickyButton component
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Routes>
-          {/* Home Page Route: Show everything except LandingPage */}
           <Route path="/" element={
             <>
               <Header />
@@ -39,9 +39,7 @@ function App() {
               <Footer />
             </>
           } />
-
-          {/* About Page Route: Show Header and LandingPage only */}
-<Route path="/accurate" element={
+          <Route path="/accurate" element={
             <>
               <Header />
               <Banner />
@@ -57,7 +55,6 @@ function App() {
               <Supbanner/>
               <Suptext/>
               <Supdiv/>
-              <TestimonialsGrid/>
               <Footer />
             </>
           } />
@@ -65,8 +62,6 @@ function App() {
             <>
               <Header />
               <GetFreeCommodityTips/>
-              <Service/>
-              <TestimonialsGrid/>
               <Footer />
             </>
           } />
@@ -89,6 +84,7 @@ function App() {
             </>
           } />
         </Routes>
+        <StickyButton /> {/* Add the Sticky Button here */}
       </div>
     </Router>
   );

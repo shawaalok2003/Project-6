@@ -10,6 +10,7 @@
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
   position: relative; /* Position relative for absolute positioning inside */
+  opacity: 0.8;
 }
 
 /* Container for Text and Call to Action */

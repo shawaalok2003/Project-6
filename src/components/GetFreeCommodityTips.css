@@ -1,61 +1,95 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  .commodity-container {
-    background: url('https://img.freepik.com/free-vector/gradient-stock-market-concept_23-2149166910.jpg');
-    width: 100%;
-    opacity: 0.8;
-    height: 60vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.commodity-container {
+  background: url('https://img.freepik.com/free-vector/gradient-stock-market-concept_23-2149166910.jpg') center / cover no-repeat; /* Center and cover the image */
+  width: 100%;
+  opacity: 0.9; /* Adjust opacity for better text visibility */
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.commodity-content {
+  text-align: center; /* Center the text */
+  color: white; /* White text color */
+  padding: 50px; /* Padding around the content */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+.commodity-content h1 {
+  font-size: 2rem; /* Font size for the heading */
+  margin-bottom: 20px; /* Space below heading */
+}
+
+.commodity-content p {
+  font-size: 1.2rem; /* Font size for paragraph */
+  margin-bottom: 40px; /* Space below paragraph */
+  margin: auto; /* Center align the paragraph */
+  max-width: 600px; /* Maximum width for better readability */
+}
+
+.commodity-form {
+  display: flex; /* Flexbox layout */
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center align items */
+  gap: 15px; /* Space between items */
+  width: 100%; /* Full width */
+}
+
+.input-field {
+  padding: 10px; /* Padding inside the input field */
+  width: 300px; /* Fixed width for input fields */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 1rem; /* Font size */
+  outline: none; /* Remove outline on focus */
+}
+
+.input-field::placeholder {
+  color: #ccc; /* Placeholder text color */
+}
+
+.trial-btn {
+  background-color: #ffcc00; /* Button background color */
+  border: none; /* No border */
+  padding: 10px 20px; /* Padding inside the button */
+  color: black; /* Button text color */
+  font-size: 1.2rem; /* Button font size */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.trial-btn:hover {
+  background-color: #ff9900; /* Darker yellow on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
   .commodity-content {
-    text-align: center;
-    color: white;
-    padding: 50px;
+      padding: 20px; /* Reduce padding for smaller screens */
   }
-  
+
   .commodity-content h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
+      font-size: 1.8rem; /* Smaller font size for heading on mobile */
   }
-  
+
   .commodity-content p {
-    font-size: 18px;
-    margin-bottom: 40px;
-    max-width: 700px;
-    margin: auto;
+      font-size: 1rem; /* Smaller font size for paragraph on mobile */
   }
-  
-  .commodity-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-  }
-  
+
   .input-field {
-    padding: 10px;
-    width: 300px;
-    border: none;
-    border-radius: 5px;
+      width: 90%; /* Full width on smaller screens */
   }
-  
+
   .trial-btn {
-    background-color: #ffcc00;
-    border: none;
-    padding: 10px 20px;
-    color: black;
-    font-size: 18px;
-    border-radius: 5px;
-    cursor: pointer;
+      width: 90%; /* Full width button on smaller screens */
   }
-  
-  .trial-btn:hover {
-    background-color: #ff9900;
-  }
+}
