@@ -15,6 +15,7 @@ return (
   <div className="col-md-3 d-flex flex-column align-items-end">
     <input type="text" className="form-control mb-3 input-style" placeholder="Your Name" />
     <input type="text" className="form-control mb-3 input-style" placeholder="Your Mobile" />
+    <input type="text" className="form-control mb-3 input-style" placeholder="Your Email" />
     <select className="form-control mb-3 input-style">
       <option>Choose Services</option>
       <option>Gold Tips</option>

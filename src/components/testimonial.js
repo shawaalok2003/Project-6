@@ -1,10 +1,12 @@
 import React from "react";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import carousel styles
 
 const testimonials = [
   {
     id: 1,
     name: "Rani Kumari",
-    image: "https://plus.unsplash.com/premium_photo-1664203067979-47448934fd97?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZmFjZXxlbnwwfHwwfHx8MA%3D%3D", // Replace with actual image URL
+    image: "https://plus.unsplash.com/premium_photo-1664203067979-47448934fd97?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZmFjZXxlbnwwfHwwfHx8MA%3D%3D",
     rating: 5,
     feedback:
       "Accurate Commodity’s tips have significantly boosted my trading success. Their timely and precise insights are invaluable. Highly recommend their services!",
@@ -12,7 +14,7 @@ const testimonials = [
   {
     id: 2,
     name: "Rakesh Singhal",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZmFjZXxlbnwwfHwwfHx8MA%3D%3D", // Replace with actual image URL
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZmFjZXxlbnwwfHwwfHx8MA%3D%3D",
     rating: 5,
     feedback:
       "I’ve seen remarkable growth in my portfolio thanks to Accurate Commodity’s expert guidance. Their support team is also incredibly helpful. A trusted partner for any trader.",
@@ -20,93 +22,154 @@ const testimonials = [
   {
     id: 3,
     name: "Amit K",
-    image: "https://images.unsplash.com/photo-1499996860823-5214fcc65f8f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZmFjZXxlbnwwfHwwfHx8MA%3D%3D", // Replace with actual image URL
+    image: "https://images.unsplash.com/photo-1499996860823-5214fcc65f8f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZmFjZXxlbnwwfHwwfHx8MA%3D%3D",
     rating: 5,
     feedback:
       "Accurate Commodity provides the best market tips I’ve ever used. Their accuracy and dedication to clients are unmatched. I’ve never felt more confident in my trading decisions.",
   },
+  {
+    id: 4,
+    name: "Sunita Sharma",
+    image: "data:image/jpeg;base64,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",
+    rating: 5,
+    feedback:
+      "Thanks to Accurate Commodity, I’m making informed trading decisions. Their tips are consistently spot on!",
+  },
+  {
+    id: 5,
+    name: "Rahul Mehta",
+    image: "data:image/jpeg;base64,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",
+    rating: 5,
+    feedback:
+      "The insights I received from Accurate Commodity were game-changing for my portfolio. I can’t recommend them enough!",
+  },
+  {
+    id: 6,
+    name: "Priya Yadav",
+    image: "data:image/jpeg;base64,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",
+    rating: 5,
+    feedback:
+      "Accurate Commodity has transformed my trading strategy. Their recommendations are always on point!",
+  },
+  {
+    id: 7,
+    name: "Anil Kumar",
+    image: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAQERUREBISEBIVFRAVEBUPFQ8PFRUVFRUWFxUVFRUYHSggGBolHRUVITEhJSkrLi4uFx8zODMsNygtLisBCgoKDg0OGhAQGi0dHR0rLS0tLSstLS0tLS0tLS0tLSstKy0tLS0rLS0rLS0tLS0tKy0tLS0tLS0tLS0rLS0tK//AABEIALcBEwMBIgACEQEDEQH/xAAcAAAABwEBAAAAAAAAAAAAAAAAAQIDBAUGBwj/xABDEAABBAADBAcFBQYEBgMAAAABAAIDEQQSIQUxQVEGBxMiYXGRMlKBobEUI0JywWKCstHh8DNDY6IlNESSwvEVFiT/xAAZAQEBAQEBAQAAAAAAAAAAAAAAAQIDBAX/xAAjEQEBAAICAwEAAgMBAAAAAAAAAQIRAyESMVFBE2EiMnEE/9oADAMBAAIRAxEAPwDqDI061ikiNKyLlpraOGI8qfyoiE0bMlqSWp0pJQN5UWVOFJRSMqGVLtEgRkSHQ2U9aFqaCcqPKjtHaoTlR5Udqk230mgwv+IRfmB8lCdrrKhlWNw3WVgXmiXN5nh5rT4Ha0E4BikY+9wBF+iLpKyosqVaFqoTlRZEq0MyAgEMqPMizJoDKhSGZDMgOkdJOZHmQKARgJIejD0CsqQ+O0oPR5lQwIAETo0+XJDnBERzGgnC4IIqwtC0Gm0ZVZJJTbnJZTZUCS5ILkopJQILiklxSiklAkvKLOUZCKkAzlFnKOkKQFnKTLPlBc4hrQCSToABxKXS5/1v7bEOGbh2kh8x1o13G778yW/NSrO6ruk/Wa63R4MaCx2ruP5G/qfRc2x20ZZXF0kjnOJvU2mmwPeSGg0NFJh2JK7gsb+u0x+ILZjx1+vyU3CzGu48jlRIII3K2w3RV799DytWjOhoFHOb4qXLFrwyW3QbrAmY4YfGuL2bmSuNubyzniPFdTbKSLBsHcQuKY/odIGl0DqeNcp3O8PBaHq06TODzg8Scjq7geQ2iN7dT8lrG7c88LHSsxRFxS6QpbcjeYoZil0hSoRZRWU5SKlAizzQs80ukKQJsoWUukKVBAlKFoUlAIEkFJIKepEQgjFpQTxCCBzBYgg0VZFVEHtDzVxSkDZSCnXBNkKhspBThCQQoEFJKWQkkIElFSUQiQJRo6QpAQC451vfeY+OPTuwxgHfWZzy75BvyXZQuI9M5e02pPvNPa0eAaxo/RZy9N8c7KwOBY1oAHBXGEwzRwUKHQKwwk7NznNB8SF569s1FhFEFIawJMTb3J6KM7ystnBCsv0w2K0gYiPuysIsjQkfzC1jHjgQedEFRNsxZoneRW8XLPtoOjGKM2EhkdVuYM1a6gkH5gq0pZvq9/5Fo5Plr4uJ/VaO16Z6eK+wQQtBVBII6QpASCOkVIAghSFIFBGEQRhAsIEIglIEII6RqjO4Tb7XSBla5q+a2Ie6vZXPtm4eOQ9oBREgH+5dLjb3R5LPbV0hl7/dTZe/3VYFqIsTVZVpc/3Eguf7isyxEYwmqKouk9wJJMnuhW3ZhF2QU1V6VNye6FE2jj3QMMjmigLK0BiCyvWHHWDkIPDgmqbJ6Pbf+2x9pGyhda0rYPf7o+S5F1ObRk+0dhdx1mo8NV20tbnA4UnjU2hB7vdC410gi/4xiQRRtjgPOJn9V2zbEvZRSSMaHFjHuAO4lrSRfouLY98k+OGJfVvZT8oDdWgAac6+i553XTvxY29o2Ngc8nNJ2UQ317R+Kh4bZ2CJIbLM57favh8leYjANlq+HPdaa/8AjGMc57W09wpzrdqOPJYxsei41L2NjspEYJIvxKvNqyAMIzFoI1I0rRZzZUYbIPQLS4yAPGUjQgArP62x2G2dhXS9zFvjk4t/mND6rSYcSxxPjlcJAGOLHjiK3G+KLC9Ho2ue4WTICH94kG95ynS/Eap7aOFMWFkYy3EMcGg6nUaC1vblZpe9CoJWYGGm6ODn8dcziQfSlbl8nII+i+0mfZI4Q0h0EcMT7o6hg1BHkVYxYlgBveu0m/VeTLcuqrc0vglDtOYTrp83gnIx4q+LOzOSXmiMcnvKax+qROdbS4m0ZmElduKAwUxNWbVlhpy0Im40h+7QhPE2qn4SQGiSqDpNtT7LGTn73ALbSHMbXJOspv37hd2wH6p4m2n6NYmTEwtkL9/JXIwTveKz3VU/Ng2g7xp6Fb1z2gUnibUwwh94pxuFPvFSXkUjiOieJ5GPsZ5lBSm4hw4IK+MNsfhsP2LS297w4eq3+GfbG+QWXxmz43EEEgilf4Y00eQVhU3MjDgVFdIjgl7y0ydY0m0xJJlKmQDS+dqPPDaQqPJNrokiUpRh3IjBRUDbZyHC91qn6zv+RdXEtHwsK8dhrKpOsKL/APIR+X6hQcn6ojWOcKu2fqu4xDvari3VPhnHaBDfcffkHBdqfgnk+1SWEL2hl7OQHd2cn8JXFXZQ+wdaa2uAppOgXYnQODwHWQd65t0z6MyYRwexpdBm0fp3Q4EBjj5kAc1w5cL1Xq4M5qxGgIR7QlDQoGFxPy/ulC2ljnukyktYK7ocRZ8Vx09XlNJ+zHtMg7w3i6rRamWQWKIOm4b1jNnbPtxeZLPADh8VcNZJHRztJrvB/drctaNtJhqcLCbxwtpAIBIoXzVTsPHZnOBPE1RseNFT3/eysiALrskNBugDy8a9VImVjT9G8G10Dnje55Jrwa3+qW5lEg71b7DwPYQtYd+pdXAnh8AAE1tCu0bovZhjrGPn8t3lbFbFhn37JUuLBv30raNwTgctaYVjcK7km54SN6uQSq/aJSwRWbkGsspEb1KwmpWYo8pC5R1iRk4k6f5f6ldnawLmnWLEPtA03xn6rWkM9VUZGG/ed9V0CPCuKynVlGBB+876lbtqaEJ2Dan4oGgblJARoaRywckFJQRWTdvV1hm90LOuxbLokA+K0+EZ3QfBZxKac3VJOhtS5GWmpW0FpDeGmJFKTRpQ8OFYBuiBsxojGniEKQMvFC1k+nGILoHD+94WwkcANTSxXS8gwurxUow3VLptMi6uKX499q7g5utrgvQDFCLajHHd940/Fd7a8HcVSIs7beFWdPMEZdnztaCS1okAG/7pwfQ+DSFMxUpE7G8DasyLFKWbWXVedIpfxNPI/JSZYmzNF7wbB4tPgoW2GfZ55GAUzPII+QAce74VokbOx2V1O56ryWfHvxy+tZsvH4iOxUTwQR3gWnUk7x58lYbRdJi2OjmbGyN9Zwy7cNLbZ4HL81Qwx9pq00NDvKthiWxMN2a+PBNt6x+IzI2wud2bWtvRgaAK0o6eS1/V5AXPlmO4BsTTzvvO+jVgIsWZC5rLdI8kNGmg4uJ4N8V2To5s5uGw0cTde6HPPFz3aucfj+i6cWPe3m5suk03aqNoEmQBXDn61Sq8Y6pBa9FeY/s6ydeSsQFBwYN2pjAeKBahY9hO5TGpqZqCojF6AKXhoXAqPB7fxKt4ysRSwFzrrDiP2lh5xu+RC6KFgusQ/fQ/kk+rVtmnurSL7h353fUrbALHdWoqF/53fVbJWkBAmkYUfFgkaKKdEgRIo2gAIIOTbacRigP2Wn5rquA/wmflb9FyjpGwuxTQNKaD811bZv8AhM/K36KiRSZxA0T6an3KCNhwKUwblGhy5VJG7RSAOKIIOCUxVFftJuiy/SGEmB3KitrNWU2LWb23IG4Z7SPwuHqFKOOdG9Not/M5d/wrwWAgargXR4f8RH5nfQLu2zXOy1SX2RDnxDjMCeG5Sds7aGGgfM4XlaSBzPAKFtpzYXB7yGjhfHyHFZnbm1PtLg3/AChwP4r0JI+Sk2rH7Rh7YOc4Xmtx5Wdf1WYkwTmk1r4H+a2+HwmQmI/g0F8W/hPp87UPaGBohwHovNqy6e3rKbipwWLxDRXZv4CwL+asWYfET03KWA7y4i/gPgrvYoa9psUW77F/FWuHgJO7T+9y1EqLsfZDIAS0an2idT6rddE9stxmGZKKB1a4DgWmvQ0sxjJRGwuOgAJ9Aq3quxrosGx4Fh2Ylu6w4lw+q68U7rjzeo6Y55uqVNtSXvt8Cn8N0jw7zlfcTv2xofJw09aT2Nha4XoQaojULpZXE7gsSHGvAKaFGwsIbVclJQGm5wSKCUCiedEFPIMjtVPw2IaVU4kGyVM2dEKtYntTrsYe1DeCyPWMR2sJ/Zk/Ral8Y7QErJdZLmh8NHX7z0paxSpvVq77p/53LbrB9WMVsldemeq+AW7WkgKLjMQ0Cr14J96pZ4qcs1UtjyQgm2A0govTPu6NdrL2z3ZQG0B8bWwwbMsbRyACrSbVphvZHkrKhxNzjROpjFShgt2gsWlsk3Q3EwAaqQHCkw/LVg2iadFNrpIcUkORNOmqjS4oDhau0Pzu0WX6SE9k5X+J2rGxuZxy/moLKbX2sJgWMYadvc7T0Ca2OW7LJbtEEcyT5LrMvSUsblhbbq1e7cPIcfis9Fg2tOVjQHOOtAD4nmncSz8Dfit+H7WdoePxEkr2ukcXucdS7kATQHAJWWkrEM+8ZyF/wlHMcrbIPkN5VuK7O46G2NlHtNHe8W8fTf6pmRoe2wq44vFucCxwY0a9mA11jmSRZ+FK1w3ZjRt1V8d/HQ7vgscnFb3HTi5ZOqVgMI0Gx8VbMoBRGxgJGOxNN0Xm9PV7UfTfaRELo2b3aeuiveiuEEcAYNzWsaPgKWVfhzPM3i1pBPmNw9aW2w07IW069w9lr3/wgr0cM/Xm57+F4iEUSeSgwYh8XsuLRyGrfQqwhxsM1hjg40baQ5rq55XAGvFNY+MZCF3eZb4LpAWgdqyx70e//tP81dYXGRzC43A8xuI8wdVisMLbRQhe5jraS1w3EaFZuMa8m9y0kSg0qbY+3i93ZzUDoGvGgJ5EcCr4vC52aal2ohG52avHepWCY4M1ScIRmfXEmlNw0Jy0dN6xI0jzxEjNyXPusiSpIT+YfJdPkZbSPBca6x8WDM0ZgcpIIHBa/UrW9VmLjMMjbp+ck+VCltBiRdLlfVdiWN7XOQLIq/JbgbXwzXayN9QtVmLnFT0NFBNuNpnE7ew1aSN+BCgHpLhm73hZsXa2BIQVGelmE9/6oLWk2ssRicmp3K5wLrY0jiFkNp43PhnO1aQNRyKu9hYl5ibyyjU+S4+Xfbdmtf2vQ5V+2pWhgDjvc0fNMR46yWEjPrlrS1nttulDmNl7pLtPILjzct8fGTe2LWp7YVoQAijfe5wKpRiYWt77s1cN/wAlI2cI6MkYILuGoV3lbOuv+kq9b4qHtXHR4eMvfrwa3i48gq+Da8rJBHMygfYcDv8A6rMbd2icTMXfgb3Yx4c/M7/Tku/HlMvX4suzOKxj8RJnkrSw1o3AcgnoW0C4/DyTWGiUxzARr7I3+K9EnTNpOAi3vO87vJNxx2T4Kez2foo7u43xKqIpYCaUl2HFAcKpMsbqCpzxokKrZdngC27xqEQw4eLAo8a0ryVjwTTxl7wV2iI8ujFPO4XfMcfiFAkcZu9qIxu5u/kFNED8TYbpGCQ8u46atHrvVjDhG1VaDgud4pctus5rMfFX7K2ZukNAEAtA8RorPEimp9oTWJFhdJNOVuyMJh25WkgEjUEjUHwKTM3M6t6k4fchHHVlBHLKKMRgpb2oR6lQEYBqtJsecSx07VzdD4jgVRkKXsiYsk8HCvjw/vxUym4uN7X8cdbgGhG144aqukkc51OOnyT2EBvwXDbofxVuY4XRo7tF5s2mC3EzNcSSJHjXXivSGKBAJHIrzp0ufWOn4W+z6BaiUnDYhzdxpSmSm7vVU0cylxzrSaW8cp5n1Tva+Kq2Tp0TqImFyCh/aEFR07pS6on1pYP6q96NMMmEj1Ato81CxmzHYqLKNLJs8lL2Pg+wfHFdgNI9F5cZ3dvTySWT+lN0ilfg3NlB3OGp4f0VB0v6QPkfFfHRteNWtj1kwxfYnue4NI1ZwJdwA5rjG3dqGUxFumT+S8H/AKODknNj4f633HGSeNjo/Q3DvkdmIzgHW1vGxVuACynVjtCOXDZRQe004D6rZOjK+hx4eOLMx0qOlBaMOXH2gQG+Z/paxMe8eK0vTCY/dxn9p5+g/wDJZuUUL5ar0YT9VamOgEmV3oNU/G7MweWihY5/dHjS7Oa0jNtvwUF4zvrkpT3FrAB7RAACJkYjHNx3qBiUd4BTK0URgt1qYNyCMSlSs+7PkUUoop97Puz5H6IEbLiAwzObmhx8394/VORlO4MVDGP9OP8AhCi3TlRISZRonmapMwUDcKfITEYoqQEDMjUzgtbKlyDQqNB3WknmgcLrdXLenLqjxGqjbPdnt/Mn+wnZH26hwGqtRbySFxsbqB9UWEnp29DAQvdGC1oOnE1uNKs29g8a2Nxw8bC8AltvoWvL3K7LvGzit9Lzr06cBtCWjYOU6Kt6Q9MdpmVzZJXsLSWua0UAQaISNidHsfjz2keVxdxkLhfoCt+kIZKn45lcO6stsjdHEfKT+iqtv9ENqYGPtZ4hksWYznrzAV2HGzo/tKZZ0X2m+AYhsVsNUARno8cpV9sXqyx07M8zzFerWjI4/GymxTfafFBbDDdUUxaC6V4dxH3fNBNjrmDJjjDDvsm/MooSPtLL91yGJfRCq9p4OWeSNsLxG4Wcx4Af+1yvTc7qj66R93BR/E6x+6uRyFdC6xdiYqEMfNN24JIGhFGr3fBYCXDv90+iu4aroHU1iY2yTB7g0nLVmrXWH7Uw7d8rB+81cW6vOh8eN7QzyPiykANYcjjpvvkt23q12Y32pJT+aYhTy+L40rb07Z5i6MhzQxoBGoO8mvVVbo7Cl7Ow8bHOijFRttsdm+6Ca14pwwUaXoxnTlb2j4aQ9kK3ssedcPiFEnkzOYBxcP5qQWFri0fiGn5hu9dyrthzCSbwYDfgSaA+RW/xj9aVxDBmO/go2/UpEkud3hwTrAooMCkhRxvUhqIRM1O1bD5FE8JwNsUgTgDcEZ/04/4Qo0upT2zrZCwEAlrGijxLa8P2SPIlRowRv3IJeHcnHqPCdVKIQNUngmyE6EAVXtprxG1kdW+RrSeTacSfkrRRsZKG0Twsjzqv1ViUhpEbRGzUgAf1KcjiyijvOpUTZdyEyHdrl8+amRuzOJ4bkov+j77irk4j11/VWRVLsXENZma5wbdEXp5qZiNs4WP254m+b2/zXHKzbrj6YnbPVbBiMZ9pDgyNxJkiDdC7mDwU7ZnQJmFxAlhkc2Kv8PhfO1eu6V4Ef9RGfI39FBxvTXBgHK5z/wArHn9FjpdJu3drR4aPMXtb5kLE7X6QRztyySMLeSzXSrGTYlx7OKVzDuzA/qslLsDGPPdhf8TShp0Ru3YmsDO2blG4aI3dNo2adsDW4DKuN4+OWOTsXtLXitL5q3HQXaT2h7WNoixbiD9FdQ06cOsUe8fQILlv/wBQ2sNOz/3BBOjT0XjsUxgbmbdmhXio4izzxU4trMQR5IILOttb0tcbsSOau1JkrdmN0ow6KYQf5bfRBBP4sPi/yZfTkfR/Dt9lgHkKTeM2dCxjnBgsNcRpxpBBJx4/Dzy+s1F3Hg81ayx2LQQXpjhUDHxWMw3jVZmV32fGkfgxDMwrg9mp+BsoIKi+idTQTvO5PxnRGgoFhPRFBBVDrgnWBBBA1G4Ob4W75EhNObvQQQMsNaKbC+0EEC6SkEEAcs9iLxMpDXUxpykEHUgnMf0+CJBWJV04CKOhwFBDZre7fNBBAvFMBGqgHAxe430QQXm5Z/k9HFei2YWMfgb6BOGFtgZR6BBBc2qdeGjgPRIkIAvkggqjzv0mxxk2hM88HgD91d82HjA7Dxn9lv0QQWskiYcSEEEFnY//2Q==",
+    rating: 5,
+    feedback:
+      "Their timely advice has saved me a lot of money in losses. Highly recommended!",
+  },
+  {
+    id: 8,
+    name: "Sneha Agarwal",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSP4fNghY7Kx6eP79gmdp6YhesUm6GZGL53Rw&s",
+    rating: 5,
+    feedback:
+      "Their insights are detailed and easy to understand. I trust their recommendations completely.",
+  },
+  {
+    id: 9,
+    name: "Vinay Sharma",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR27sFJreSiqEOAMqqHo3lkHyi1SE4MzAKUKg&s",
+    rating: 5,
+    feedback:
+      "Accurate Commodity has been a game changer for me. I am now making profits consistently.",
+  },
 ];
 
-const TestimonialsGrid = () => {
+const TestimonialsCarousel = () => {
   // Inline CSS Styles
-  const gridContainerStyle = {
-    display: "grid",
-    gridTemplateColumns: "repeat(3, 1fr)",
-    gap: "20px",
-    padding: "10px",
-    paddingLeft: "155px",
-    paddingRight: "155px",
+  const carouselContainerStyle = {
+    padding: "20px",
     backgroundColor: "#f8f9fa",
-// Light background color for contrast
   };
 
-  const gridTitleStyle = {
+  const carouselTitleStyle = {
     fontSize: "2rem",
     fontWeight: "bold",
-    padding : "90px",
-    paddingBottom:"0px",
-    paddingTop:"40px",
     marginBottom: "30px",
-    color: "#343a40", // Darker text color
+    color: "#343a40",
     textAlign: "center",
   };
 
-  const gridItemStyle = {
+  const carouselItemStyle = {
+    display: "flex",
+    justifyContent: "space-around",
     padding: "20px",
-    background: "#fff", // White background for each testimonial
-    borderRadius: "10px", // Rounded corners
-    boxShadow: "0 2px 10px rgba(0, 0, 0, 0.1)", // Subtle shadow
+    background: "#fff",
+    borderRadius: "10px",
+    boxShadow: "0 2px 10px rgba(0, 0, 0, 0.1)",
     textAlign: "center",
-    transition: "transform 0.3s", // Animation on hover
   };
 
-  const gridImageStyle = {
-    width: "100px", // Fixed width for images
-    height: "120px", // Fixed height for images
-    //borderRadius: "50%", // Circle shape
-    marginBottom: "15px", // Spacing below the image
+  const carouselImageStyle = {
+    width: "100px",
+    height: "120px",
+    marginBottom: "15px",
   };
 
-  const gridNameStyle = {
+  const carouselNameStyle = {
     fontSize: "1.2rem",
     fontWeight: "bold",
     marginBottom: "5px",
   };
 
-  const gridRatingStyle = {
-    marginBottom: "10px", // Space between rating and feedback
-    color: "#FFD700", // Gold color for stars
+  const carouselRatingStyle = {
+    marginBottom: "10px",
+    color: "#FFD700",
   };
 
-  const gridFeedbackStyle = {
+  const carouselFeedbackStyle = {
     fontSize: "0.9rem",
-    color: "#6c757d", // Dark gray for feedback text
-    lineHeight: "1.5", // Improve readability
+    color: "#6c757d",
+    lineHeight: "1.5",
   };
+
+  // Helper function to split testimonials into chunks of three
+  const chunkArray = (array, chunkSize) => {
+    const result = [];
+    for (let i = 0; i < array.length; i += chunkSize) {
+      result.push(array.slice(i, i + chunkSize));
+    }
+    return result;
+  };
+
+  const testimonialChunks = chunkArray(testimonials, 3); // Split into chunks of 3
 
   return (
-    <div>
-      <h2 style={gridTitleStyle}>What Our Customers Say</h2>
-      <div style={gridContainerStyle}>
-        {testimonials.map((testimonial) => (
-          <div style={gridItemStyle} key={testimonial.id}>
-            <img
-              src={testimonial.image}
-              alt={testimonial.name}
-              style={gridImageStyle}
-            />
-            <h3 style={gridNameStyle}>{testimonial.name}</h3>
-            <div style={gridRatingStyle}>
-              {Array.from({ length: testimonial.rating }).map((_, index) => (
-                <span key={index}>&#9733;</span>
-              ))}
-            </div>
-            <p style={gridFeedbackStyle}>{testimonial.feedback}</p>
+    <div style={carouselContainerStyle}>
+      <h2 style={carouselTitleStyle}>What Our Customers Say</h2>
+      <Carousel 
+        showThumbs={true}
+        showStatus={true}
+        infiniteLoop={true}
+        autoPlay={true}
+        interval={3000}
+        transitionTime={500}
+      >
+        {testimonialChunks.map((chunk, index) => (
+          <div style={carouselItemStyle} key={index}>
+            {chunk.map((testimonial) => (
+              <div key={testimonial.id} style={{ flex: "1", padding: "10px" }}>
+                <img
+                  src={testimonial.image}
+                  alt={testimonial.name}
+                  style={carouselImageStyle}
+                />
+                <h3 style={carouselNameStyle}>{testimonial.name}</h3>
+                <div style={carouselRatingStyle}>
+                  {Array.from({ length: testimonial.rating }).map((_, index) => (
+                    <span key={index}>&#9733;</span>
+                  ))}
+                </div>
+                <p style={carouselFeedbackStyle}>{testimonial.feedback}</p>
+              </div>
+            ))}
           </div>
         ))}
-      </div>
+      </Carousel>
     </div>
   );
 };
 
-export default TestimonialsGrid;
+export default TestimonialsCarousel;

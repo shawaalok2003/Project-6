@@ -1,92 +1,127 @@
 .who-we-are-container {
-    padding: 40px;
-    background-color: #f5f6fa;
-    font-family: Arial, sans-serif;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  /* Header Section */
-  .header-section {
-    text-align: center;
-    margin-bottom: 80px;
-  }
-  
-  .header-title {
-    font-size: 36px;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  .header-subtitle {
-    font-size: 18px;
-    color: #888;
-    margin-top: 10px;
-  }
-  
-  /* Content Section */
+  padding: 40px;
+  background-color: #f5f6fa; /* Light gray background */
+  font-family: Arial, sans-serif; /* Font style */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Center items horizontally */
+}
+
+/* Header Section */
+.header-section {
+  text-align: center; /* Center align header text */
+  margin-bottom: 80px; /* Space below header */
+}
+
+.header-title {
+  font-size: 36px; /* Title font size */
+  font-weight: bold; /* Bold title */
+  color: #333; /* Dark gray color */
+}
+
+.header-subtitle {
+  font-size: 18px; /* Subtitle font size */
+  color: #888; /* Light gray color */
+  margin-top: 10px; /* Space above subtitle */
+}
+
+/* Content Section */
+.content-section {
+  display: flex; /* Flexbox layout */
+  justify-content: space-between; /* Space between left and right content */
+  padding: 0 120px; /* Horizontal padding */
+  width: 100%; /* Full width */
+}
+
+/* Left Content */
+.left-content {
+  flex: 1; /* Flexible width */
+  padding-right: 40px; /* Space on the right */
+  text-align: left; /* Align text to the left */
+}
+
+/* Highlight Title */
+.highlight-title {
+  font-size: 14px; /* Font size for highlight title */
+  color: #ff6600; /* Orange color */
+  margin-bottom: 10px; /* Space below highlight title */
+  font-weight: bolder; /* Bolder font weight */
+}
+
+/* Main Title */
+.main-title {
+  font-size: 32px; /* Main title font size */
+  font-weight: bold; /* Bold font weight */
+  color: #002060; /* Dark blue color */
+}
+
+/* Right Content */
+.right-content {
+  flex: 2; /* Larger flexible width */
+  padding-left: 40px; /* Space on the left */
+}
+
+/* Mission and Vision Container */
+.mission-vision-container {
+  margin-bottom: 40px; /* Space below mission/vision section */
+  text-align: left; /* Align text to the left */
+}
+
+/* Section Title */
+.section-title {
+  font-size: 24px; /* Section title font size */
+  font-weight: bold; /* Bold section title */
+  color: #333; /* Dark gray color */
+  margin-bottom: 10px; /* Space below section title */
+}
+
+/* Section Description */
+.section-description {
+  font-size: 16px; /* Description font size */
+  line-height: 1.6; /* Line height for readability */
+  color: #666; /* Gray color */
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
   .content-section {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 120px;
-    padding-right: 150px;
+      padding: 0 40px; /* Reduced horizontal padding for mid-sized screens */
   }
-  
+}
+
+@media (max-width: 768px) {
+  .content-section {
+      flex-direction: column; /* Stack content vertically on smaller screens */
+      padding: 20px; /* Add padding for smaller screens */
+  }
+
+  .left-content, .right-content {
+      padding: 0; /* Remove padding on smaller screens */
+  }
+
   .left-content {
-    flex: 1;
-    padding-right: 40px;
-    text-align: left;
+      margin-bottom: 40px; /* Space below left content */
   }
-  
-  .highlight-title {
-    font-size: 14px;
-    color: #ff6600;
-    margin-bottom: 10px;
-    font-weight: bolder;
+
+  .header-title {
+      font-size: 28px; /* Smaller font size for title on mobile */
   }
-  
+
+  .header-subtitle {
+      font-size: 16px; /* Smaller font size for subtitle on mobile */
+  }
+
   .main-title {
-    font-size: 32px;
-    font-weight: bold;
-    color: #002060;
+      font-size: 28px; /* Smaller font size for main title on mobile */
   }
-  
-  .right-content {
-    flex: 2;
-    padding-left: 40px;
-  }
-  
-  .mission-vision-container {
-    margin-bottom: 40px;
-    text-align: left;
-  }
-  
+
   .section-title {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
+      font-size: 20px; /* Smaller section title font size on mobile */
   }
-  
+
   .section-description {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #666;
+      font-size: 14px; /* Smaller description font size on mobile */
   }
-  
-  @media (max-width: 768px) {
-    .content-section {
-      flex-direction: column;
-    }
-  
-    .left-content, .right-content {
-      padding: 0;
-    }
-  
-    .left-content {
-      margin-bottom: 40px;
-    }
-  }
+}

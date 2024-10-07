@@ -1,56 +1,105 @@
 /* Styling for the banner */
 .banner6-container {
-    background: linear-gradient(90deg, #2e0e48, #08132c);
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    color: white;
-    font-family: Arial, sans-serif;
+  background: linear-gradient(90deg, #2e0e48, #08132c); /* Gradient background */
+  height: 200px; /* Fixed height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: white;
+  font-family: Arial, sans-serif;
+  overflow: hidden; /* Prevents overflow of elements */
+}
+
+.banner6-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  position: relative;
+}
+
+.ai1-background {
+  font-size: 100px; /* Large text for background */
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.1); /* Light transparent text */
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%); /* Center vertically */
+  z-index: 1;
+}
+
+.banner6-text {
+  z-index: 2; /* On top of the background */
+  position: absolute;
+  text-align: right; /* Align text to the right */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner6-text h1 {
+  font-size: 48px; /* Main heading size */
+  margin: 0;
+  color: white; /* Text color */
+  right: 40%; /* Position adjustment */
+}
+
+.banner6-text p {
+  font-size: 18px; /* Subheading size */
+  font-weight: bold;
+  color: #ffd700; /* Gold color for subheading */
+  margin: 0;
+}
+
+/* Adding styles for images */
+.banner-image {
+  width: 100%; /* Responsive width */
+  max-width: 300px; /* Maximum width for images */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Box shadow for depth */
+  margin: 20px; /* Margin around images */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .banner6-container {
+      height: auto; /* Allow height to adjust on smaller screens */
+      padding: 20px; /* Add padding for better spacing */
   }
-  
-  .banner6-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-    max-width: 1200px;
-    position: relative;
-  }
-  
-  .ai1-background {
-    font-size: 100px;
-    font-weight: bold;
-    color: rgba(255, 255, 255, 0.1);
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1;
-  }
-  
-  .banner6-text {
-    z-index: 2;
-    position: absolute;
-    text-align: right;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
+
   .banner6-text h1 {
-    font-size: 48px;
-    margin: 0;
-    color: white;
-    right: 40%;
+      font-size: 32px; /* Smaller font size for the heading */
+      text-align: center; /* Center text */
   }
-  
+
   .banner6-text p {
-    font-size: 18px;
-    font-weight: bold;
-    color: #ffd700; /* Gold color */
-    margin: 0;
+      font-size: 16px; /* Smaller font size for subheading */
   }
-  
+
+  .ai1-background {
+      font-size: 60px; /* Smaller background text */
+  }
+
+  .banner-image {
+      max-width: 100%; /* Full width for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .banner6-text h1 {
+      font-size: 24px; /* Further reduced heading size */
+  }
+
+  .banner6-text p {
+      font-size: 14px; /* Further reduced subheading size */
+  }
+
+  .ai1-background {
+      font-size: 40px; /* Further reduced background text size */
+  }
+}

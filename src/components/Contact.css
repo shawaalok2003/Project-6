@@ -1,48 +1,89 @@
+/* Container for the contact section */
 .contact-container {
-    text-align: center;
-    margin: 50px auto;
-    max-width: 600px;
+  text-align: center; /* Center text */
+  margin: 50px auto; /* Center margin */
+  max-width: 600px; /* Maximum width for the container */
+  padding: 20px; /* Add padding around the container */
+  background: linear-gradient(90deg, #e6f2ff, #cce0ff); /* Light gradient background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Heading styles */
+.contact-container h2 {
+  font-size: 2em; /* Font size for heading */
+  color: #333; /* Heading color */
+}
+
+/* Paragraph styles */
+.contact-container p {
+  font-size: 1.2em; /* Font size for paragraph */
+  margin-bottom: 30px; /* Margin below the paragraph */
+  color: #666; /* Paragraph color */
+}
+
+/* Container for contact methods */
+.contact-methods {
+  display: flex; /* Flex layout */
+  justify-content: space-around; /* Space methods evenly */
+  flex-wrap: wrap; /* Wrap methods on smaller screens */
+}
+
+/* Individual contact item styles */
+.contact-item {
+  display: flex; /* Flex layout */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center align items */
+  margin: 20px; /* Margin around each item */
+  flex: 1 1 150px; /* Allow flexible growth and shrink */
+}
+
+/* Icon styles */
+.contact-item i {
+  font-size: 2em; /* Font size for icons */
+  color: #003366; /* Icon color */
+  margin-bottom: 10px; /* Margin below the icon */
+}
+
+/* Contact method text styles */
+.contact-item p {
+  font-weight: bold; /* Bold text for method labels */
+  margin-bottom: 5px; /* Margin below the label */
+}
+
+/* Link styles */
+.contact-item a {
+  text-decoration: none; /* Remove underline from links */
+  color: #333; /* Link color */
+  font-size: 1.1em; /* Font size for links */
+}
+
+/* Hover effect for links */
+.contact-item a:hover {
+  color: #003366; /* Change color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-container {
+      padding: 15px; /* Reduced padding for smaller screens */
   }
-  
-  .contact-container h2 {
-    font-size: 2em;
-    color: #333;
-  }
-  
-  .contact-container p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-    color: #666;
-  }
-  
+
   .contact-methods {
-    display: flex;
-    justify-content: space-around;
+      flex-direction: column; /* Stack contact methods vertically */
+      align-items: center; /* Center align methods */
   }
-  
+
   .contact-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+      margin: 10px; /* Reduced margin for smaller screens */
+      flex: 1 1 100%; /* Full width for each item */
   }
-  
-  .contact-item i {
-    font-size: 2em;
-    color: #003366; /* Adjust this to match the blue color in your image */
-    margin-bottom: 10px;
+
+  .contact-container h2 {
+      font-size: 1.8em; /* Smaller heading size for mobile */
   }
-  
-  .contact-item p {
-    font-weight: bold;
-    margin-bottom: 5px;
+
+  .contact-container p {
+      font-size: 1em; /* Smaller paragraph size for mobile */
   }
-  
-  .contact-item a {
-    text-decoration: none;
-    color: #333;
-    font-size: 1.1em;
-  }
-  
-  .contact-item a:hover {
-    color: #003366;
-  }
+}

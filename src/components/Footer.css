@@ -1,123 +1,132 @@
 .footer {
-    background-color: #2a2a2a;
-    color: #ffffff;
-    padding: 50px 0;
-    text-align: left;
-  }
-  
+  background-color: #2a2a2a; /* Dark background */
+  color: #ffffff; /* White text */
+  padding: 50px 0; /* Top and bottom padding */
+  text-align: left; /* Left align text */
+}
+
+/* Footer Container */
+.footer-container {
+  max-width: 1200px; /* Maximum width */
+  margin: 0 auto; /* Center the container */
+  padding: 0 20px; /* Side padding */
+  display: flex; /* Flexbox layout */
+  justify-content: space-between; /* Space items evenly */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Footer Left and Right Sections */
+.footer-left, .footer-right {
+  flex: 1; /* Equal flex grow */
+}
+
+/* Maximum Width for Sections */
+.footer-left {
+  max-width: 50%; /* Maximum width for the left section */
+}
+
+.footer-right {
+  max-width: 45%; /* Maximum width for the right section */
+}
+
+/* Footer Headings */
+.footer h3 {
+  font-size: 24px; /* Heading font size */
+  margin-bottom: 20px; /* Space below heading */
+}
+
+/* Footer Description */
+.footer-description {
+  margin-bottom: 20px; /* Space below description */
+  line-height: 1.6; /* Line height for readability */
+}
+
+/* Footer Links */
+.footer-links {
+  list-style: none; /* Remove default list styles */
+  padding: 0; /* Remove padding */
+}
+
+.footer-links li {
+  margin-bottom: 10px; /* Space below each link */
+}
+
+.footer-links a {
+  color: #ffffff; /* Link color */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+.footer-links a:hover {
+  color: #ffcc00; /* Highlight link on hover */
+}
+
+/* Footer Form Styling */
+.footer-form {
+  display: flex; /* Flexbox layout */
+  flex-direction: column; /* Column layout for inputs */
+}
+
+.footer-form input,
+.footer-form textarea {
+  width: 100%; /* Full width inputs */
+  padding: 10px; /* Padding */
+  margin-bottom: 15px; /* Space below inputs */
+  border-radius: 5px; /* Rounded corners */
+  border: none; /* No border */
+  font-size: 16px; /* Font size */
+}
+
+.footer-form input::placeholder,
+.footer-form textarea::placeholder {
+  color: #999999; /* Placeholder color */
+}
+
+.footer-form button {
+  padding: 10px 20px; /* Button padding */
+  background-color: #ffcc00; /* Button background */
+  color: #2a2a2a; /* Button text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s; /* Background transition */
+}
+
+.footer-form button:hover {
+  background-color: #ff9900; /* Darker yellow on hover */
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+  text-align: center; /* Center text */
+  padding: 20px 0; /* Top and bottom padding */
+  border-top: 1px solid #444444; /* Top border */
+  margin-top: 30px; /* Space above bottom section */
+}
+
+.footer-bottom p {
+  margin: 0; /* Remove margin */
+  font-size: 14px; /* Font size */
+  color: #cccccc; /* Light gray color */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
   .footer-container {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+      flex-direction: column; /* Stack items vertically on small screens */
+      align-items: center; /* Center align items */
   }
-  
+
   .footer-left, .footer-right {
-    flex: 1;
+      max-width: 100%; /* Full width on small screens */
+      margin-bottom: 20px; /* Space below each section */
+      text-align: center; /* Center align text */
   }
-  
-  .footer-left {
-    max-width: 50%;
+}
+
+@media (max-width: 1024px) {
+  .footer-container {
+      padding: 0 10px; /* Reduce side padding */
   }
-  
-  .footer-right {
-    max-width: 45%;
-  }
-  
-  .footer h3 {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  .footer-description {
-    margin-bottom: 20px;
-    line-height: 1.6;
-  }
-  
-  .footer-links {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .footer-links li {
-    margin-bottom: 10px;
-  }
-  
-  .footer-links a {
-    color: #ffffff;
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-  
-  .footer-links a:hover {
-    color: #ffcc00; /* Highlight link on hover */
-  }
-  
-  /* Footer Form Styling */
-  .footer-form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .footer-form input,
-  .footer-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    border: none;
-    font-size: 16px;
-  }
-  
-  .footer-form input::placeholder,
-  .footer-form textarea::placeholder {
-    color: #999999;
-  }
-  
-  .footer-form button {
-    padding: 10px 20px;
-    background-color: #ffcc00;
-    color: #2a2a2a;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .footer-form button:hover {
-    background-color: #ff9900; /* Darker yellow on hover */
-  }
-  
-  /* Footer bottom section */
-  .footer-bottom {
-    text-align: center;
-    padding: 20px 0;
-    border-top: 1px solid #444444;
-    margin-top: 30px;
-  }
-  
-  .footer-bottom p {
-    margin: 0;
-    font-size: 14px;
-    color: #cccccc;
-  }
-  
-  /* Responsive Styles */
-  @media (max-width: 768px) {
-    .footer-container {
-      flex-direction: column;
-    }
-  
-    .footer-left, .footer-right {
-      max-width: 100%;
-      margin-bottom: 20px;
-    }
-  }
-  
-  @media (max-width: 1024px) {
-    .footer-container {
-      padding: 0 10px;
-    }
-  }
+}

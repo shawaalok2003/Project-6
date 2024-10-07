@@ -1,46 +1,74 @@
 /* Container for the entire section */
 .accur1-section-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 20px;
-    gap: 30px;
-    font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center; /* Center align the section */
+  align-items: flex-start; /* Align items to the start */
+  padding: 20px; /* Padding around the section */
+  gap: 30px; /* Space between items */
+  font-family: Arial, sans-serif; /* Font family */
+  background: linear-gradient(90deg, #f0f0f0, #e0e0e0); /* Light gradient background */
+}
+
+/* Container for the image */
+.image1-container img {
+  width: 100%; /* Full width */
+  max-width: 400px; /* Max width of the image */
+  height: auto; /* Automatic height */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Improved shadow for depth */
+  border: 3px solid rgb(139, 147, 193); /* Border around the image */
+}
+
+/* Container for the text */
+.text1-container {
+  max-width: 600px; /* Max width for text */
+  text-align: left; /* Align text to the left */
+}
+
+/* Heading 2 */
+.text1-container h2 {
+  font-size: 32px; /* Heading font size */
+  margin-bottom: 20px; /* Space below the heading */
+  color: #333; /* Heading color */
+  font-weight: bold; /* Bold font weight */
+}
+
+/* Heading 3 */
+.text1-container h3 {
+  font-size: 20px; /* Subheading font size */
+  margin-top: 20px; /* Space above the subheading */
+  margin-bottom: 10px; /* Space below the subheading */
+  font-weight: 400; /* Normal font weight */
+}
+
+/* Paragraph text */
+.text1-container p {
+  font-size: 16px; /* Paragraph font size */
+  line-height: 1.6; /* Line height for readability */
+  color: #555; /* Paragraph color */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .accur1-section-container {
+      flex-direction: column; /* Stack items vertically on small screens */
+      align-items: center; /* Center items */
+      gap: 20px; /* Reduced gap for smaller screens */
   }
-  
-  /* Container for the image */
-  .image1-container img {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: 3px solid rgb(139, 147, 193);
-  }
-  
-  /* Container for the text */
+
   .text1-container {
-    max-width: 600px;
-    text-align: left;
+      text-align: center; /* Center text on smaller screens */
   }
-  
+
   .text1-container h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-    color: #333;
-    font-weight: bold;
+      font-size: 28px; /* Smaller heading size for mobile */
   }
-  
+
   .text1-container h3 {
-    font-size: 20px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    font-weight: 400;
+      font-size: 18px; /* Smaller subheading size for mobile */
   }
-  
+
   .text1-container p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #555;
+      font-size: 14px; /* Smaller paragraph size for mobile */
   }
-  
+}

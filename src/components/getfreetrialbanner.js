@@ -14,6 +14,7 @@ const GetFreeCommodityTips = () => {
         <form className="commodity-form">
           <input type="text" placeholder="Name" className="input-field" />
           <input type="tel" placeholder="Phone" className="input-field" />
+          <input type="email" placeholder="Email" className="input-field" />
           <select className="input-field">
             <option>Choose Services</option>
             <option>Gold</option>

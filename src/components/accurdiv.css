@@ -1,55 +1,71 @@
 .accurAI-section2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-  }
-  
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  padding: 20px; /* Padding around the section */
+}
+
+.accurAI-row {
+  display: flex;
+  justify-content: space-between; /* Space elements evenly */
+  align-items: center; /* Center align items vertically */
+  width: 61%; /* Fixed width of the row */
+  margin: 0 auto; /* Center the row in the container */
+}
+
+.accurAI-image img {
+  width: 450px; /* Fixed width for images */
+  object-fit: cover; /* Cover image proportionally */
+  height: auto; /* Automatic height */
+  border-radius: 10px; /* Optional: rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+.accurAI-text {
+  flex: 1; /* Allow the text area to take available space */
+  margin-left: 20px; /* Space between image and text */
+  text-align: left; /* Align text to the left */
+}
+
+.accurAI-text h3 {
+  font-size: 24px; /* Heading size */
+  margin-bottom: 15px; /* Space below the heading */
+  color: #343a40; /* Darker text color for contrast */
+}
+
+.accurAI-text p {
+  font-size: 16px; /* Paragraph font size */
+  line-height: 1.6; /* Improved line height for readability */
+  color: #6c757d; /* Gray text color for paragraphs */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .accurAI-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width:61%;
+      flex-direction: column; /* Stack elements vertically on smaller screens */
+      text-align: center; /* Center text alignment */
   }
-  
-  .accurAI-image img {
-    width: 450px;
-    object-fit: cover;
-    height: auto;
-    /* border-radius: 10px; */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.102);
-  }
-  
+
   .accurAI-text {
-    flex: 1;
-    margin-left: 20px;
-    text-align: left;
+      margin-left: 0; /* Remove left margin for centered text */
+      margin-bottom: 20px; /* Space below text */
   }
-  
+
+  .accurAI-image {
+      margin-bottom: 20px; /* Space below images */
+  }
+
+  .accurAI-image img {
+      width: 100%; /* Full width on smaller screens */
+      max-width: 450px; /* Max width for images to maintain proportion */
+  }
+
   .accurAI-text h3 {
-    font-size: 24px;
-    margin-bottom: 15px;
+      font-size: 20px; /* Smaller heading size for mobile */
   }
-  
+
   .accurAI-text p {
-    font-size: 16px;
-    line-height: 1.6;
+      font-size: 14px; /* Smaller paragraph size for mobile */
   }
-  
-  @media (max-width: 768px) {
-    .accurAI-row {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .accurAI-text {
-      margin-left: 0;
-      margin-bottom: 20px;
-    }
-  
-    .accurAI-image {
-      margin-bottom: 20px;
-    }
-  }
-  
+}

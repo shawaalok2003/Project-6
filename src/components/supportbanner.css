@@ -1,56 +1,77 @@
 /* Styling for the banner */
 .banner6-container {
-    background: linear-gradient(90deg, #2e0e48, #08132c);
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    color: white;
-    font-family: Arial, sans-serif;
+  background: linear-gradient(90deg, #2e0e48, #08132c);
+  height: 200px; /* Height for the banner */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: white; /* Text color */
+  font-family: Arial, sans-serif;
+}
+
+.banner6-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%; /* Width for content */
+  max-width: 1200px; /* Max width for larger screens */
+  position: relative;
+}
+
+/* Background text styling */
+.ai1-background {
+  font-size: 100px; /* Size of background text */
+  font-weight: bold; /* Bold text */
+  color: rgba(255, 255, 255, 0.1); /* Light background color */
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%); /* Centering the text vertically */
+  z-index: 1; /* Behind the main text */
+}
+
+/* Main text styling */
+.banner6-text {
+  z-index: 2; /* On top of background text */
+  position: absolute;
+  text-align: center; /* Center alignment for text */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center alignment */
+  justify-content: center;
+}
+
+/* Main heading styling */
+.banner6-text h1 {
+  font-size: 48px; /* Heading font size */
+  margin: 0; /* No margin */
+  color: white; /* White text color */
+}
+
+/* Subtitle styling */
+.banner6-text p {
+  font-size: 18px; /* Subtitle font size */
+  font-weight: bold; /* Bold subtitle */
+  color: #ffd700; /* Gold color for subtitle */
+  margin: 0; /* No margin */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .banner6-container {
+      height: 150px; /* Reduce height for smaller screens */
   }
-  
-  .banner6-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-    max-width: 1200px;
-    position: relative;
-  }
-  
+
   .ai1-background {
-    font-size: 100px;
-    font-weight: bold;
-    color: rgba(255, 255, 255, 0.1);
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1;
+      font-size: 60px; /* Smaller background text on mobile */
   }
-  
-  .banner6-text {
-    z-index: 2;
-    position: absolute;
-    text-align: right;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
+
   .banner6-text h1 {
-    font-size: 48px;
-    margin: 0;
-    color: white;
-    right: 40%;
+      font-size: 36px; /* Smaller heading font size on mobile */
   }
-  
+
   .banner6-text p {
-    font-size: 18px;
-    font-weight: bold;
-    color: #ffd700; /* Gold color */
-    margin: 0;
+      font-size: 16px; /* Smaller subtitle font size on mobile */
   }
-  
+}

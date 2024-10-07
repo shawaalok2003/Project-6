@@ -12,7 +12,7 @@ const Header = () => {
         <div className="d-flex">
           <div className="contact-info mx-3"><i className="bi bi-whatsapp"></i> Whatsapp: 8267907171</div>
           <div className="contact-info mx-3"><i className="bi bi-phone"></i> Phone: 8267907171</div>
-          <div className="contact-info mx-3"><i className="bi bi-envelope"></i> Email: info@accurcommo.com</div>
+          <div className="contact-info mx-3"><i className="bi bi-envelope"></i> Email: Lead@nextleveltraders.in</div>
         </div>
       </div>
 

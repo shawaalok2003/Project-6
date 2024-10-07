@@ -1,44 +1,55 @@
 .accurAI-section5 {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin-top: 100px;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 100px; /* Space above the section */
+}
+
+.accurAI-row, .accurAI5-row {
+  width: 60%; /* Width for the row */
+  margin-left: auto; /* Center the content */
+  margin-right: auto; /* Center the content */
+  display: flex;
+  justify-content: space-between; /* Space between text and image */
+  align-items: center; /* Center vertically */
+  background: linear-gradient(135deg, #ffffff, #f8f8f8); /* Gradient background */
+  padding: 1.5rem; /* Padding inside rows */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+}
+
+.accurAI5-image5 img {
+  width: 450px; /* Image width */
+  height: 350px; /* Image height */
+  object-fit: cover; /* Cover image */
+  border-radius: 8px; /* Rounded corners for the image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for the image */
+}
+
+.accurAI5-text {
+  max-width: 50%; /* Max width for the text */
+  padding: 1rem; /* Padding for text */
+}
+
+.accurAI-row {
+  flex-direction: row; /* Normal row layout */
+}
+
+.accurAI5-row {
+  flex-direction: row-reverse; /* Image on the right for this row */
+}
+
+@media (max-width: 768px) {
   .accurAI-row, .accurAI5-row {
-    width: 60%;
-    margin-left: 250px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+      flex-direction: column; /* Stack image and text on smaller screens */
   }
-  
-  .accurAI5-image5 img {
-    width: 450px;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 8px;
+
+  .accurAI5-text, .accurAI5-image5 {
+      max-width: 100%; /* Full width for text and image */
+      margin: 0; /* Remove margin for smaller screens */
   }
-  
-  .accurAI5-text {
-    max-width: 50%;
-    padding: 1rem;
+
+  .accurAI-row, .accurAI5-row {
+      width: 90%; /* Adjust width for mobile */
   }
-  
-  .accurAI-row {
-    flex-direction: row;
-  }
-  
-  .accurAI5-row {
-    flex-direction: row-reverse; /* This will place the image on the right and text on the left */
-  }
-  
-  @media (max-width: 768px) {
-    .accurAI-row, .accurAI5-row {
-      flex-direction: column; /* Stack image and text vertically on smaller screens */
-    }
-    
-    .accurAI5-text, .accurAI5-image5 {
-      max-width: 100%;
-    }
-  }
+}

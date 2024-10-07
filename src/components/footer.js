@@ -17,16 +17,6 @@ const Footer = () => {
             <li><a href="#privacy-policy">Privacy Policy</a></li>
           </ul>
         </div>
-
-        <div className="footer-right">
-          <h3>Contact Us</h3>
-          <form className="footer-form">
-            <input type="text" name="name" placeholder="Your Name" required />
-            <input type="email" name="email" placeholder="Your Email" required />
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
-          </form>
-        </div>
       </div>
 
       <div className="footer-bottom">

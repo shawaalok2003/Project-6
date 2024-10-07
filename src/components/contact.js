@@ -22,7 +22,7 @@ const Contact = () => {
         <div className="contact-item">
           <i className="fas fa-envelope"></i>
           <p>Email Us:</p>
-          <a href="mailto:support@accurcommo.com">support@accurcommo.com</a>
+          <a href="mailto:Lead@nextleveltraders.in">Lead@nextleveltraders.in</a>
         </div>
       </div>
     </div>

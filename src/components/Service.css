@@ -9,7 +9,7 @@
   padding: 40px;
   justify-content: center;
   align-items: flex-start;
-  background-color: #f8f8f8;
+  background: linear-gradient(135deg, #f8f8f8, #e0e0e0); /* Added gradient background */
 }
 
 .left-column {
@@ -24,8 +24,8 @@
 .profile-image {
   width: 100%;
   max-width: 350px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced box shadow */
 }
 
 .feature-item {
@@ -35,20 +35,33 @@
 
 .feature-item h2 {
   font-size: 24px;
-  color: #2c9a35;
+  color: #2c9a35; /* Heading color */
   display: flex;
   align-items: center;
 }
 
 .feature-item h2::before {
-  content: '★';
-  color: #003366;
+  content: '★'; /* Star icon */
+  color: #003366; /* Star color */
   font-size: 24px;
   margin-right: 10px;
 }
 
 .feature-item p {
-  font-size: 16px;
-  color: #555;
-  line-height: 1.6;
+  font-size: 16px; /* Paragraph font size */
+  color: #555; /* Paragraph color */
+  line-height: 1.6; /* Line height for readability */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .features-container {
+      flex-direction: column; /* Stack columns vertically on small screens */
+      align-items: center; /* Center align items */
+  }
+
+  .left-column {
+      margin-right: 0; /* Remove right margin on small screens */
+      margin-bottom: 20px; /* Space below left column */
+  }
 }

@@ -1,64 +1,109 @@
 /* Styling for the banner */
 .banner2-container {
-    background: linear-gradient(90deg, #2e0e48, #08132c);
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    color: white;
-    font-family: Arial, sans-serif;
+  background: linear-gradient(90deg, #2e0e48, #08132c); /* Gradient background */
+  height: 400px; /* Fixed height */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  position: relative;
+  color: white;
+  font-family: Arial, sans-serif;
+  overflow: hidden; /* Prevent overflow of elements */
+}
+
+.banner2-content {
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  position: relative;
+  width: 60%; /* Width of the content area */
+}
+
+.ai2-background {
+  font-size: 100px; /* Large text for background */
+  font-weight: bold; /* Bold text */
+  color: rgba(255, 255, 255, 0.1); /* Light transparent text */
+  position: absolute;
+  left: 0; /* Align to the left */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Center the text */
+  z-index: 1; /* Background text behind other content */
+}
+
+.banner2-text {
+  z-index: 2; /* On top of the background */
+  position: absolute; /* Absolute positioning */
+  text-align: center; /* Center text alignment */
+  display: flex;
+  flex-direction: column; /* Vertical stacking of elements */
+  align-items: center; /* Center align items */
+  justify-content: center; /* Center align content */
+  padding: 20px; /* Padding around text for spacing */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Box shadow for depth */
+  border-radius: 10px; /* Rounded corners for the text container */
+}
+
+.banner2-text h1 {
+  font-size: 60px; /* Main heading size */
+  margin: 0; /* Remove margin */
+  color: white; /* Text color */
+}
+
+.banner2-text p {
+  font-size: 18px; /* Subheading size */
+  font-weight: 100; /* Light text weight */
+  color: white; /* Text color */
+  margin: 0; /* Remove margin */
+  padding-top: 15px; /* Space above paragraph */
+}
+
+.banner2-text a {
+  font-size: 25px; /* Size for the link */
+  font-weight: bold; /* Bold text for the link */
+  color: white; /* Link color */
+  margin: 0; /* Remove margin */
+  padding-top: 20px; /* Space above link */
+  text-decoration: underline; /* Underline for links */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .banner2-container {
+      height: auto; /* Allow height to adjust on smaller screens */
+      padding: 20px; /* Add padding for better spacing */
   }
-  
-  .banner2-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 60%;
-  }
-  
-  .ai2-background {
-    font-size: 100px;
-    font-weight: bold;
-    color: rgba(255, 255, 255, 0.1);
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1;
-  }
-  
-  .banner2-text {
-    z-index: 2;
-    position: absolute;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
+
   .banner2-text h1 {
-    font-size: 60px;
-    margin: 0;
-    color: white;
+      font-size: 40px; /* Smaller font size for heading */
   }
-  
+
   .banner2-text p {
-    font-size: 18px;
-    font-weight:100;
-    color: white; /* Gold color */
-    margin: 0;
-    padding-top: 15px;
+      font-size: 16px; /* Smaller font size for subheading */
   }
 
   .banner2-text a {
-    font-size: 25px;
-    font-weight: bold;
-    color: white; /* Gold color */
-    margin: 0;
-    padding-top: 20px;
+      font-size: 20px; /* Smaller font size for link */
   }
 
-  
-  
+  .ai2-background {
+      font-size: 60px; /* Smaller background text */
+  }
+}
+
+@media (max-width: 480px) {
+  .banner2-text h1 {
+      font-size: 28px; /* Further reduced heading size */
+  }
+
+  .banner2-text p {
+      font-size: 14px; /* Further reduced subheading size */
+  }
+
+  .banner2-text a {
+      font-size: 18px; /* Further reduced link size */
+  }
+
+  .ai2-background {
+      font-size: 40px; /* Further reduced background text size */
+  }
+}
