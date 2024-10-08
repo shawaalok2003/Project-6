@@ -14,7 +14,7 @@ const Tips = () => {
       <div className="text-section">
         <h1>Get Free Commodity Tips</h1>
         <p>
-          Welcome to Accurate Commodity, your trusted partner in the financial
+          Welcome to nextleveltraders, your trusted partner in the financial
           markets. We specialize in providing precise commodity tips, stock market tips, and
           options tips to help you make informed trading decisions. Our mission is to empower
           traders and investors with reliable, timely, and actionable insights.
@@ -26,7 +26,7 @@ const Tips = () => {
           strategies to maximize your returns.
         </p>
         <p>
-          At Accurate Commodity, we pride ourselves on our commitment to accuracy,
+          At nextleveltraders, we pride ourselves on our commitment to accuracy,
           expertise, and customer satisfaction. Our timely tips allow you to act quickly
           and seize market opportunities. Join our community and elevate your trading
           success with our expert guidance.

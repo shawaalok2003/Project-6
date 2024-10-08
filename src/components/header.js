@@ -27,7 +27,7 @@ const Header = () => {
       {/* Logo and Navigation */}
       <nav className="navbar navbar-expand-lg navbar-light bg-white custom-nav">
         <a className="navbar-brand" href="/">
-          <img src="path-to-logo.png" alt="Accurate Commodity" className="logo logooo" />
+          <img src="path-to-logo.png" alt="nextleveltraders" className="logo logooo" />
         </a>
         <button
           className="navbar-toggler"

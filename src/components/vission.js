@@ -15,15 +15,15 @@ const WhoWeAre = () => {
       {/* Content Section */}
       <div className="content-section">
         <div className="left-content">
-          <h3 className="highlight-title">Accurate Commodity Tips</h3>
-          <h1 className="main-title">Trade Smarter, Profit More with Accurate Commodity</h1>
+          <h3 className="highlight-title">nextleveltraders Tips</h3>
+          <h1 className="main-title">Trade Smarter, Profit More with nextleveltraders</h1>
         </div>
 
         <div className="right-content">
           <div className="mission-vision-container">
             <h3 className="section-title">Our Mission:</h3>
             <p className="section-description">
-              Our mission at <strong>Accurate Commodity</strong> is to deliver precise, timely, and comprehensive market tips that enable our clients to make informed trading decisions. We are committed to providing unparalleled expertise, fostering long-term client relationships, and continuously enhancing our services to meet the evolving needs of the financial markets. Through our dedication to accuracy, integrity, and innovation, we aim to support our clients' journey to financial success.
+              Our mission at <strong>nextleveltraders</strong> is to deliver precise, timely, and comprehensive market tips that enable our clients to make informed trading decisions. We are committed to providing unparalleled expertise, fostering long-term client relationships, and continuously enhancing our services to meet the evolving needs of the financial markets. Through our dedication to accuracy, integrity, and innovation, we aim to support our clients' journey to financial success.
             </p>
           </div>
 

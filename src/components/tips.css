@@ -68,7 +68,9 @@
 /* Responsive Styles */
 @media (max-width: 768px) {
     .container1 {
-        flex-direction: column; /* Stack image and text on smaller screens */
+        flex-direction: column;
+        width: 90%; 
+        height: 80%;/* Stack image and text on smaller screens */
     }
 
     .text-section {
@@ -76,10 +78,14 @@
     }
 
     .text-section h1 {
-        font-size: 2rem; /* Smaller title on smaller screens */
+        font-size: 2rem;
+        color: blue; /* Smaller title on smaller screens */
     }
 
     .text-section p {
         font-size: 1rem; /* Adjust paragraph size */
+    }
+    .image-section img{
+        width: 100%;
     }
 }

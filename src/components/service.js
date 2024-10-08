@@ -13,11 +13,11 @@ const Service = () => {
       <div className="right-column">
         <div className="feature-item">
           <h2>Accuracy</h2>
-          <p>We pride ourselves on the precision of our recommendations. Our commitment to accuracy means you get dependable advice, helping you make informed decisions and maximize your returns. Trust Accurate Commodity for tips that are timely, relevant, and profitable.</p>
+          <p>We pride ourselves on the precision of our recommendations. Our commitment to accuracy means you get dependable advice, helping you make informed decisions and maximize your returns. Trust nextleveltraders for tips that are timely, relevant, and profitable.</p>
         </div>
         <div className="feature-item">
           <h2>Timeliness</h2>
-          <p>In the fast-paced world of trading, timing is crucial. We deliver our tips promptly, allowing you to act quickly and capitalize on market opportunities. Stay ahead of the curve with Accurate Commodity’s timely and actionable insights.</p>
+          <p>In the fast-paced world of trading, timing is crucial. We deliver our tips promptly, allowing you to act quickly and capitalize on market opportunities. Stay ahead of the curve with nextleveltraders’s timely and actionable insights.</p>
         </div>
         <div className="feature-item">
           <h2>Expertise</h2>

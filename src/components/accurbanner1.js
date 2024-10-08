@@ -7,7 +7,7 @@ const Banner2 = () => {
       <div className="banner2-content">
         <div className="banner2-text">
           <h1>Take the Next Step Towards Financial Success</h1>
-          <p>Are you ready to elevate your trading game and achieve your financial goals? Accurate Commodity is here to provide you with the expert tips and insights you need to succeed in the competitive world of financial markets.</p>
+          <p>Are you ready to elevate your trading game and achieve your financial goals? nextleveltraders is here to provide you with the expert tips and insights you need to succeed in the competitive world of financial markets.</p>
           <a>Call Now: 8267907171</a>
         </div>
       </div>

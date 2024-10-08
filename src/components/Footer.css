@@ -22,7 +22,7 @@
 
 /* Maximum Width for Sections */
 .footer-left {
-  max-width: 50%; /* Maximum width for the left section */
+  max-width: 100%; /* Maximum width for the left section */
 }
 
 .footer-right {

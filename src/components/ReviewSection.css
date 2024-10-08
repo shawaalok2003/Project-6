@@ -1,0 +1,92 @@
+.review-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f3f3f3;
+  }
+  
+  .review-section h2 {
+    font-size: 34px;
+    margin-bottom: 40px;
+    color: #333;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  /* Review group layout */
+  .review-group {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+  
+  /* Style for individual review card */
+  .review-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    border: 4px solid black;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    max-width: 300px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Hover effect for the review card */
+  .review-card:hover {
+    transform: translateY(-10px); /* Lift the card */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Elevated shadow */
+  }
+  
+  /* Image styling for the review card */
+  .review-image {
+    border-radius: 50%;
+    width: 100px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 5px solid #eee;
+  }
+  
+  /* Name of the reviewer */
+  .review-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+  }
+  
+  /* The review text */
+  .review-card p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+    margin: 0;
+  }
+  
+  /* Media query for small screens */
+  @media (max-width: 600px) {
+    .review-group {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .review-card {
+      max-width: 90%; /* Take up more space on small screens */
+      margin-bottom: 30px;
+    }
+    
+    .review-section h2 {
+      font-size: 28px; /* Smaller title for mobile */
+    }
+    
+    .review-card h3 {
+      font-size: 20px;
+    }
+    
+    .review-card p {
+      font-size: 14px;
+    }
+  }
+  

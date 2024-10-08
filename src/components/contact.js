@@ -6,7 +6,7 @@ const Contact = () => {
     <div className="contact-container">
       <h2>Get In Touch!</h2>
       <p>
-        At Accurate Commodity, we value your feedback and are here to assist you with any questions or concerns.
+        At nextleveltraders, we value your feedback and are here to assist you with any questions or concerns.
       </p>
       <div className="contact-methods">
         <div className="contact-item">
@@ -22,7 +22,7 @@ const Contact = () => {
         <div className="contact-item">
           <i className="fas fa-envelope"></i>
           <p>Email Us:</p>
-          <a href="mailto:Lead@nextleveltraders.in">Lead@nextleveltraders.in</a>
+          <a href="mailto:Lead@nextleveltraders.in">support@nextleveltraders.in</a>
         </div>
       </div>
     </div>
