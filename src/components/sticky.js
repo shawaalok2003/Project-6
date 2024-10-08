@@ -1,17 +1,17 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate for programmatic navigation
 import './StickyButton.css'; // Import the CSS for the button
 
 const StickyButton = () => {
-  const handleScrollToEnquiry = () => {
-    // Logic to scroll to the enquiry section
-    const enquirySection = document.getElementById('enquiry'); // Ensure you have an element with this ID in your enquiry section
-    if (enquirySection) {
-      enquirySection.scrollIntoView({ behavior: 'smooth' });
-    }
+  const navigate = useNavigate(); // Initialize the navigate function
+
+  const handleClick = () => {
+    // Navigate to the home page when the button is clicked
+    navigate('/contact');
   };
 
   return (
-    <button className="sticky-button" onClick={handleScrollToEnquiry}>
+    <button className="sticky-button" onClick={handleClick}>
       Enquire Now
     </button>
   );
