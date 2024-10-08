@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './AccurateCommodity.css'; 
-import { Link } from 'react-router-dom'; // Import custom CSS
+import './AccurateCommodity.css';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
+  // State to handle menu open/close
+  const [isOpen, setIsOpen] = useState(false);
+
+  // Function to toggle the menu
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <div className="sticky">
       {/* Top Bar */}
@@ -21,10 +29,16 @@ const Header = () => {
         <a className="navbar-brand" href="/">
           <img src="path-to-logo.png" alt="Accurate Commodity" className="logo logooo" />
         </a>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button
+          className="navbar-toggler"
+          type="button"
+          onClick={toggleMenu}
+          aria-expanded={isOpen ? "true" : "false"}
+          aria-label="Toggle navigation"
+        >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarNav1">
+        <div className={`collapse navbar-collapse ${isOpen ? 'show' : ''}`} id="navbarNav1">
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
               <a className="nav-link" href="/">Home</a>
@@ -46,7 +60,8 @@ const Header = () => {
             </li>
           </ul>
         </div>
-      </nav></div>
+      </nav>
+    </div>
   );
 };
 
