@@ -5,7 +5,7 @@ const Service = () => {
     <div className="features-container">
       <div className="left-column">
         <img 
-          src="https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDN8fG1lbnxlbnwwfHwwfHx8MA%3D%3D" 
+          src="https://plus.unsplash.com/premium_photo-1670071482526-051a758fa95b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8d29ya2luZyUyMGluJTIwbGFwdG9wfGVufDB8fDB8fHww" 
           alt="Profile" 
           className="profile-image" 
         />

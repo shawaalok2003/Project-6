@@ -1,7 +1,7 @@
 .sticky-button {
     position: fixed; /* Stick to the viewport */
     bottom: 20px; /* Distance from the bottom */
-    right: 20px; /* Distance from the right */
+    right: 45%; /* Distance from the right */
     background-color: #ffcc00; /* Button background color */
     color: #2a2a2a; /* Button text color */
     border: none; /* No border */

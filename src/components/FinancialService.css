@@ -1,6 +1,6 @@
 /* Banner Container */
 .banner-contanierr {
-  background: url('https://img.freepik.com/free-vector/gradient-stock-market-concept_23-2149166910.jpg');
+  background: url('https://wallpaperboat.com/wp-content/uploads/2020/11/03/59121/forex-11-920x518.jpg');
   background-size: cover; /* Cover the entire container */
   background-position: center; /* Center the background image */
   background-repeat: no-repeat; /* Prevent repeating the image */
@@ -10,7 +10,7 @@
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
   position: relative; /* Position relative for absolute positioning inside */
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 /* Container for Text and Call to Action */

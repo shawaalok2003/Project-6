@@ -1,5 +1,6 @@
 .banner-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1507208773393-40d9fc670acf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTIzfHx3b21lbiUyMG9mZmljZXxlbnwwfHwwfHx8MA%3D%3D') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background: url('https://images.unsplash.com/photo-1507208773393-40d9fc670acf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTIzfHx3b21lbiUyMG9mZmljZXxlbnwwfHwwfHx8MA%3D%3D') no-repeat center center/cover;
     height: 400px;
     display: flex;
     justify-content: flex-start; /* Align the content to the left */
@@ -27,7 +28,7 @@
     max-width: 30%;
     padding-top: 0px;
     padding: 10px;
-    height: 315px;
+    height: 320px;
     margin-top: 30px;
     margin-right: 135px;
     margin-bottom: 150px;
@@ -124,6 +125,6 @@
 }
 
 .justify-content-end {
-    margin-top: 60px;
+    margin-top: 75px;
     margin-left: 90px;
 }
