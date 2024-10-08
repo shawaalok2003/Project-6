@@ -2,10 +2,10 @@
     position: fixed; /* Stick to the viewport */
     bottom: 20px; /* Distance from the bottom */
     right: 45%; /* Distance from the right */
-    background-color: #ffcc00; /* Button background color */
+    background-color: #1b86c0; /* Button background color */
     color: #2a2a2a; /* Button text color */
     border: none; /* No border */
-    padding: 15px 20px; /* Padding for the button */
+    padding: 10px 15px; /* Padding for the button */
     border-radius: 5px; /* Rounded corners */
     font-size: 16px; /* Font size */
     cursor: pointer; /* Pointer cursor on hover */
@@ -15,5 +15,5 @@
 }
 
 .sticky-button:hover {
-    background-color: #ff9900; /* Darker yellow on hover */
+    background-color: #1dd3ef; /* Darker yellow on hover */
 }

@@ -6,14 +6,16 @@ const StickyButton = () => {
   const navigate = useNavigate(); // Initialize the navigate function
 
   const handleClick = () => {
-    // Navigate to the home page when the button is clicked
+    // Navigate to the contact page when the button is clicked
     navigate('/contact');
   };
 
   return (
-    <button className="sticky-button" onClick={handleClick}>
-      Enquire Now
-    </button>
+    <div className='sticky'>
+      <button className="sticky-button" onClick={handleClick}>
+        Enquire Now
+      </button>
+    </div>
   );
 };
 
